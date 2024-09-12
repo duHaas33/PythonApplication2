@@ -1,0 +1,60 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>230a8341-8a88-4c9f-842a-37b148858051</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonApplication2</Name>
+    <RootNamespace>PythonApplication2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\bluetooth\" />
+    <Folder Include="src\bluetooth\__pycache__\" />
+    <Folder Include="src\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\bluetooth\r10_pb2.pyi" />
+    <Content Include="src\bluetooth\__pycache__\bluetooth_device_base.cpython-311.pyc" />
+    <Content Include="src\bluetooth\__pycache__\bluetooth_device_service.cpython-311.pyc" />
+    <Content Include="src\__pycache__\appdata.cpython-311.pyc" />
+    <Content Include="src\__pycache__\ball_data.cpython-311.pyc" />
+    <Content Include="src\__pycache__\settings.cpython-311.pyc" />
+    <Content Include="src\__pycache__\settings_base.cpython-311.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
+    <Compile Include="src\appdata.py" />
+    <Compile Include="src\ball_data.py" />
+    <Compile Include="src\bluetooth\bluetooth_device_base.py" />
+    <Compile Include="src\bluetooth\bluetooth_device_service.py" />
+    <Compile Include="src\bluetooth\bluetooth_utils.py" />
+    <Compile Include="src\bluetooth\r10_device.py" />
+    <Compile Include="src\bluetooth\r10_pb2.py" />
+    <Compile Include="src\settings.py" />
+    <Compile Include="src\settings_base.py" />
+    <Compile Include="src\window.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
